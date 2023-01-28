@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ae9cf2a7854b4bb68b202ad6e18e6dbb" Name="Diagram1">
+        <EntityTypeShape EntityType="VisionCinemaModel1.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VisionCinemaModel1.AspNetRole" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VisionCinemaModel1.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VisionCinemaModel1.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VisionCinemaModel1.AspNetUser" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VisionCinemaModel1.Feedback" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VisionCinemaModel1.Movy" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VisionCinemaModel1.Show_Seats" Width="1.5" PointX="10.5" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VisionCinemaModel1.Show" Width="1.5" PointX="6" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="VisionCinemaModel1.suggestion1" Width="1.5" PointX="8.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VisionCinemaModel1.Ticket" Width="1.5" PointX="8.25" PointY="7" IsExpanded="true" />
+        <AssociationConnector Association="VisionCinemaModel1.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="VisionCinemaModel1.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="VisionCinemaModel1.FK__Feedback__userId__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="VisionCinemaModel1.FK__Tickets__userId__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="VisionCinemaModel1.FK__Shows__Movie_id__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="VisionCinemaModel1.FK__Show_Seat__Show___4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="VisionCinemaModel1.FK__Show_Seat__Ticke__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="VisionCinemaModel1.FK__Tickets__Show_id__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="VisionCinemaModel1.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

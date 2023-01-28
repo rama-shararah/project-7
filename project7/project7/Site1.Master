@@ -1,0 +1,182 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="project7.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+        <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .footer .btn.btn-link:hover {
+            color: red;
+            letter-spacing: 1px;
+            box-shadow: none;
+        }
+
+      
+                .copyright a:hover {
+                    color: red;
+                }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+                <nav class="navbar navbar-expand-lg  sticky-top p-0" style="background-color:black; color:white;">
+        <a href="Homepage.aspx" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h1 id="logo" class="m-0 text-light">MovieMaster</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" style="color:white;z-index:2;">
+            <span class="navbar-toggler-icon" style="color: white; z-index: 2;">  <i class="fas fa-bars toggle-menu" style="align-items:center;"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0 ">
+                <a href="Homepage.aspx" class="nav-item nav-link active text-light">Home</a>
+                <a href="aboutUS.aspx" class="nav-item nav-link text-light">About</a>               
+                <a href="contactttt.aspx" class="nav-item nav-link text-light">Contact</a>
+                <a href="LoginPage.aspx" class="nav-item nav-link text-light" runat="server" id="login">Login</a> 
+                <a href="ticket.aspx"  class="nav-item nav-link text-light" runat="server" id="ticket" visible="false">My Ticket</a>
+
+            <asp:LinkButton  class="nav-item nav-link text-light" runat="server" ID="logout" Visible="false" OnClick="Logout">Logout</asp:LinkButton>
+            </div>
+            <a href="ALL.aspx" id="all" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block text-light " style="background-color:darkred;border:none;font-weight:bold;">View Movies<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+           
+               <!-- Footer Start -->
+    <div class="container-fluid  text-light footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s" style="background-color:#121212">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3  col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h4 class="text-white mb-4">About MovieMaster</h4>
+                        <p>MovieMaster has designed a distinguished site with a distinct hall that allows you to experience a wonderful display with a screen that makes you feel the reality of the story.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <h4 class="text-white mb-4">Our Office</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Suliman Al Nabulsi St, Amman, Jordan</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>MovieMaster@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <!--<div class="col-lg-3 col-md-6">
+        <h4 class="text-white mb-4">Services</h4>
+        <a class="btn btn-link" href="">Landscaping</a>
+        <a class="btn btn-link" href="">Pruning plants</a>
+        <a class="btn btn-link" href="">Urban Gardening</a>
+        <a class="btn btn-link" href="">Garden Maintenance</a>
+        <a class="btn btn-link" href="">Green Technology</a>
+    </div>-->
+                <div class="col-lg-3 col-md-12">
+                    <h4 class="text-white mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="aboutUS.aspx">About Us</a>
+                    <a class="btn btn-link" href="contactttt.aspx">Contact Us</a>
+                    <a class="btn btn-link" href="ALL.aspx">Movies</a>
+                  
+                </div>
+
+
+                <div class="col-lg-3 col-md-12">
+                    <h4 class="text-light mb-4">Photo Gallery</h4>
+                    <div class="row g-2">
+                        <div class="col-4">
+                            <img class="img-fluid" src="img/002.jpg" alt="Image">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid" src="img/ccc.jpg" alt="Image">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid" src="img/chairs.jpg" alt="Image">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid" src="img/ccc.jpg" alt="Image">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid" src="img/movie-theater.jpg" alt="Image">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid" src="img/sssss.jfif" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4" style="background-color:#121212 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">MovieMaster</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+   <%-- <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>--%>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+        </div>
+    </form>
+</body>
+</html>
