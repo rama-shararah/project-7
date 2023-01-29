@@ -10,6 +10,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using project7;
 using project7.Models;
+using Microsoft.AspNet.Identity;
 
 namespace Movie_tickets.Admin
 {
@@ -18,13 +19,11 @@ namespace Movie_tickets.Admin
         VisionCinemaEntities1 obj = new VisionCinemaEntities1();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
 
 
             var q1 = (from s in obj.Tickets
-                  // where s.AspNetUser.Id == s.userId && s.Show.Show_id== s.Show_id && s.Show.Movie_id == s.Show.Movy.Movie_Id
-
-                     select new
+                      select new
                           {
                               s.Ticket_id,
                               s.Ticket_Date,
@@ -39,12 +38,51 @@ namespace Movie_tickets.Admin
 
                 GridView1.DataSource = q1;
                 GridView1.DataBind();
-            }
+            int rowCount = GridView1.Rows.Count;
+            if (rowCount == 0) { pdf.Visible = false; excel.Visible = false; }
+        }
+        protected void ButtonSearch_Click(object sender, EventArgs e)
+        {
+            var q1 = (from s in obj.Tickets
+                      where s.Show.Movy.Title.Contains(TextSearch.Text) || s.AspNetUser.First_name.Contains(TextSearch.Text)
+                      select new
+                      {
+                          s.Ticket_id,
+                          s.Ticket_Date,
+                          s.price,
+                          s.AspNetUser.First_name,
+                          s.Show.Show_Date,
+                          s.Show.Movy.Title,
+                      }).ToList();
 
+
+            GridView1.DataSource = q1;
+            GridView1.DataBind();
+            int rowCount = GridView1.Rows.Count;
+            if (rowCount == 0) { pdf.Visible = false; excel.Visible = false; }
+            else { pdf.Visible = true; excel.Visible = true; }
+        }
         protected void printPdf(object sender, EventArgs e)
         {
-           
-           
+            var q1 = (from s in obj.Tickets
+                      where s.Show.Movy.Title.Contains(TextSearch.Text)
+
+                      select new
+                      {
+                          s.Ticket_id,
+                          s.Ticket_Date,
+                          s.price,
+                          s.AspNetUser.First_name,
+                          s.Show.Show_Date,
+                          s.Show.Movy.Title,
+
+
+
+                      }).ToList();
+
+            GridView1.DataSource = q1;
+            GridView1.DataBind();
+
             string date = DateTime.Now.ToString("dd-MM-yyyy");
             Response.ContentType = "application/pdf";
             Response.AddHeader("content-disposition", $"attachment;filename=Tickets{date}.pdf");

@@ -40,8 +40,8 @@ h1{
     <br /> <br />
     <div class="container">
           <div class="links">
-              <asp:LinkButton runat="server" OnClick="printExcel">Export Into Excel</asp:LinkButton>
-            <asp:LinkButton runat="server" OnClick="printPdf">Export Into PDF</asp:LinkButton></div>
+              <asp:LinkButton runat="server" ID="excel" OnClick="printExcel">Export Into Excel</asp:LinkButton>
+            <asp:LinkButton runat="server" ID="pdf" OnClick="printPdf">Export Into PDF</asp:LinkButton></div>
         <asp:GridView AllowPaging="True" ID="GridView1" runat="server" Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" AutoGenerateColumns="False" PageSize="5" OnPageIndexChanging="GridView1_PageIndexChanging">
             
             <FooterStyle BackColor="White" ForeColor="#000066" />

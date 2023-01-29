@@ -219,12 +219,15 @@
     <Content Include="Admin\img\joker.jpg" />
     <Content Include="Admin\img\karasypic2.png" />
     <Content Include="Admin\img\lord.jpg" />
+    <Content Include="Admin\img\lubna4.PNG" />
+    <Content Include="Admin\img\mosab2.PNG" />
     <Content Include="Admin\img\mov.jfif" />
     <Content Include="Admin\img\movie-theater.jpg" />
     <Content Include="Admin\img\pride.jpg" />
     <Content Include="Admin\img\puss.jpg" />
     <Content Include="Admin\img\pusspos.png" />
     <Content Include="Admin\img\raama.jfif" />
+    <Content Include="Admin\img\rahmaa.jpg" />
     <Content Include="Admin\img\rama2.png" />
     <Content Include="Admin\img\service-1.jpg" />
     <Content Include="Admin\img\service-2.jpg" />
@@ -533,6 +536,8 @@
     <Content Include="img\film.png" />
     <Content Include="img\film2.jpeg" />
     <Content Include="img\film6.jpeg" />
+    <Content Include="img\galaxy2.jpg" />
+    <Content Include="img\galaxy3.jpg" />
     <Content Include="img\godfather.jpg" />
     <Content Include="img\icon\icon-1.png" />
     <Content Include="img\icon\icon-10.png" />
@@ -555,6 +560,9 @@
     <Content Include="img\lord.jpg" />
     <Content Include="img\lubna.jpeg" />
     <Content Include="img\lubna4.PNG" />
+    <Content Include="img\mario.jpg" />
+    <Content Include="img\marioo.jpg" />
+    <Content Include="img\marioo2.jpg" />
     <Content Include="img\mosab2.PNG" />
     <Content Include="img\mov.jfif" />
     <Content Include="img\movie-theater.jpg" />
@@ -562,6 +570,7 @@
     <Content Include="img\puss.jpg" />
     <Content Include="img\pusspos.png" />
     <Content Include="img\raama.jfif" />
+    <Content Include="img\rahmaa.jpg" />
     <Content Include="img\redblack.jfif" />
     <Content Include="img\service-1.jpg" />
     <Content Include="img\service-2.jpg" />

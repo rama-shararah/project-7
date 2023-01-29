@@ -14,6 +14,9 @@ namespace Movie_tickets.Admin
         VisionCinemaEntities1 obj = new VisionCinemaEntities1();
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            Textdate.Attributes.Add("min", DateTime.Now.ToString("yyyy-MM-dd"));
+            Textdate.Text = DateTime.Now.ToString("yyyy-MM-dd");
             if (!IsPostBack)
             {
                 var x = from Movy in obj.Movies select Movy;

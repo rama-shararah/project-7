@@ -27,6 +27,8 @@ namespace project7
             int j = Convert.ToInt32(ses);
 
 
+            var u = db.Shows.FirstOrDefault(d => d.Show_id == id2).Show_Date;
+            DateTime date4 = Convert.ToDateTime(u);
             //string ses = "2";
             //int id2 = 1;
             //int j = 2;
@@ -35,7 +37,7 @@ namespace project7
             film.InnerHtml = db.Shows.FirstOrDefault(d => d.Show_id == id2).Movy.Title;
             tic.InnerHtml = ses;
             price.InnerHtml = pricee.ToString();
-            datee.InnerHtml = db.Shows.FirstOrDefault(d => d.Show_id == id2).Show_Date.ToString();
+            datee.InnerHtml = date4.ToString("dd/MM/yyyy");
 
         }
 
@@ -47,7 +49,7 @@ namespace project7
             if (Request.Form["senderName"] != "" && Request.Form["senderEmail"] != "" && Request.Form["receiverName"] != "" && Request.Form["receiverEmail"] != "")
             {
 
-                var id = Session["showId"];
+                var id = Request.QueryString["id"];
                 var id2 = Convert.ToInt32(id);
                 //var id2 = 1;
 

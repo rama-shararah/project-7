@@ -349,7 +349,7 @@ body{
         function pass(quantity, donation) {
             Swal.fire({
                 icon: 'success',
-                title: 'Your message has been sent succesfully !',
+                title: 'Payment done succesfully !',
                 html: '<a href="https://localhost:44339/ticket%22%3EReturn" To Home Page</a>',
                 //footer: '<a href="">Why do I have this issue?</a>'
 

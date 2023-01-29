@@ -14,12 +14,14 @@
 -moz-box-shadow: 12px 14px 39px 3px rgba(0,0,0,0.39);">
 <h1>Tickets</h1>
     </div>
-    <br /> <br /> <br />
+    <div class="search">
+       <asp:TextBox ID="TextSearch" runat="server" placeholder="Search by Movie name or User Name"></asp:TextBox><asp:Button ID="ButtonSearch" runat="server" Text="Search" CssClass="btn_search" OnClick="ButtonSearch_Click" />
+   </div>    <br /> <br /><br />
 
     <div class="container">
-        <div class="links">
-              <asp:LinkButton runat="server" OnClick="printExcel">Export Into Excel</asp:LinkButton>
-            <asp:LinkButton runat="server" OnClick="printPdf">Export Into PDF</asp:LinkButton></div>
+       <div class="links">
+              <asp:LinkButton runat="server" ID="excel" OnClick="printExcel">Export Into Excel</asp:LinkButton>
+            <asp:LinkButton runat="server" ID="pdf" OnClick="printPdf">Export Into PDF</asp:LinkButton></div>
         <asp:GridView ID="GridView1" runat="server" Width="100%" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
             <Columns>
                 <asp:BoundField DataField="Ticket_id" HeaderText="ID" />

@@ -89,7 +89,7 @@
         <asp:RequiredFieldValidator CssClass="validWarning" ID="RequiredFieldValidator5" runat="server" ControlToValidate="Textdate" ErrorMessage="Show Date IS Required" Display="Dynamic"></asp:RequiredFieldValidator>
 
         <br />
-        <asp:TextBox ID="Textdate" runat="server" placeholder="" type="date" CssClass="text_box"></asp:TextBox><br /><br />
+        <asp:TextBox ID="Textdate" runat="server" min='<%= @DateTime.Now.ToString("yyyy-MM-dd") %>' placeholder="" type="date" CssClass="text_box"></asp:TextBox><br /><br />
 
         <asp:Label ID="Label2" runat="server" Text="Start Time" CssClass="lable"></asp:Label>
         <asp:RequiredFieldValidator CssClass="validWarning" ID="RequiredFieldValidator1" runat="server" ControlToValidate="Textstarthour" ErrorMessage="Start Time IS Required" Display="Dynamic"></asp:RequiredFieldValidator>

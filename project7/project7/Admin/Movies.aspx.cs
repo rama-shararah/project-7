@@ -38,7 +38,8 @@ namespace Movie_tickets.Admin
            
             GridView1.DataSource = q1;
                 GridView1.DataBind();
-            
+            int rowCount = GridView1.Rows.Count;
+            if (rowCount == 0) { pdf.Visible = false; excel.Visible = false; }
         }
         protected void ButtonAdd_Click(object sender, EventArgs e)
         {
@@ -63,7 +64,9 @@ namespace Movie_tickets.Admin
                       }).ToList();
             GridView1.DataSource = q1;
             GridView1.DataBind();
-
+            int rowCount = GridView1.Rows.Count;
+            if (rowCount == 0) { pdf.Visible = false; excel.Visible = false; }
+            else { pdf.Visible = true; excel.Visible = true; }
 
         }
 

@@ -24,6 +24,8 @@ namespace Movie_tickets.Admin
             var users = from user in db.AspNetUsers select user;
            Users.DataSource = users.ToList();
             Users.DataBind();
+            int rowCount = Users.Rows.Count;
+            if (rowCount == 0) { pdf.Visible = false; excel.Visible = false; }
         }
 
         protected void ButtonSearch_Click(object sender, EventArgs e)
@@ -42,6 +44,10 @@ namespace Movie_tickets.Admin
 
             Users.DataSource = q1;
             Users.DataBind();
+
+            int rowCount = Users.Rows.Count;
+            if (rowCount == 0) { pdf.Visible = false; excel.Visible = false; }
+            else { pdf.Visible = true; excel.Visible = true; }
         }
         protected void printPdf(object sender, EventArgs e)
         {

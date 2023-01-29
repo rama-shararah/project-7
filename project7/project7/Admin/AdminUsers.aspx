@@ -56,8 +56,8 @@
          
               <div class="container" style="width:60%">
               <div class="links">
-              <asp:LinkButton runat="server" OnClick="printExcel">Export Into Excel</asp:LinkButton>
-            <asp:LinkButton runat="server" OnClick="printPdf">Export Into PDF</asp:LinkButton></div>
+              <asp:LinkButton runat="server" ID="excel" OnClick="printExcel">Export Into Excel</asp:LinkButton>
+            <asp:LinkButton runat="server" ID="pdf" OnClick="printPdf">Export Into PDF</asp:LinkButton></div>
     <asp:GridView ID="Users" runat="server"  AutoGenerateColumns="False" Width="100%" >
 
         <Columns>
